@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 
 app.post('/recorder/v1/start', (req, res, next) => {
     let { body } = req;
-    let { appid, channel, key } = body;
+    let { channel } = body;
     if (!appid) {
         throw new Error("appid is mandatory");
     }
