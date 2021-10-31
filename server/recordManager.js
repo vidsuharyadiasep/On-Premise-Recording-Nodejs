@@ -20,7 +20,7 @@ class RecordManager{
 
     initStorage(appid, channel, sid) {
         return new Promise((resolve, reject) => {
-            const storagePath = path.resolve(__dirname, `./output/${sid}`);
+            const storagePath = path.resolve(__dirname, `./output/${channel}/${sid}`);
             fs.mkdir(storagePath, {recursive: true}, err => {
                 if(err){
                     throw err;
